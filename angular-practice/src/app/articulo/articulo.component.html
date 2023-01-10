@@ -1,4 +1,5 @@
 <h1>Articulo Nº{{ numeroDeArticulo }}, {{ getName() }}</h1>
-<button [disabled]="allowNewTitle">Crear título</button>
+<button [disabled]="allowNewTitle" (click)="onCreateTitle()">Crear título</button>
+<p> {{createTitleStatus}} </p>
 <app-titulo></app-titulo>
 <app-titulo></app-titulo>

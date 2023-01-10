@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class ArticuloComponent {
   numeroDeArticulo: number = 1;
   nombreDeArticulo: string = 'Aprendiendo Angular'
-  allowNewTitle: boolean = false;
+  allowNewTitle: boolean = true;
+  createTitleStatus: string = 'Ningún título creado'
 
   getName() {
     return this.nombreDeArticulo;
@@ -16,7 +17,12 @@ export class ArticuloComponent {
 
   constructor() {
     setTimeout(()=>{
-      this.allowNewTitle = true;
+      this.allowNewTitle = false;
     }, 2000)
   }
+
+  onCreateTitle() {
+    this.createTitleStatus = 'Nuevo título creado'
+  }
+
 }
