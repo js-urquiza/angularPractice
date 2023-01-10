@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./articulo.component.css']
 })
 export class ArticuloComponent {
+  numeroDeArticulo: number = 1;
+  nombreDeArticulo: string = 'Aprendiendo Angular'
 
+  getName() {
+    return this.nombreDeArticulo;
+  }
 }
