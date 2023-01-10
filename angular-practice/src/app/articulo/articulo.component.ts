@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
 export class ArticuloComponent {
   numeroDeArticulo: number = 1;
   nombreDeArticulo: string = 'Aprendiendo Angular'
+  allowNewTitle: boolean = false;
 
   getName() {
     return this.nombreDeArticulo;
+  }
+
+  constructor() {
+    setTimeout(()=>{
+      this.allowNewTitle = true;
+    }, 2000)
   }
 }
