@@ -1,6 +1,7 @@
 <h1>Articulo Nº{{ numeroDeArticulo }}, {{ getName() }}</h1>
 <label for="inputName">Ingrese título</label>
-<input type="text" (input)="onUpdateInputName($event)">
+<!-- <input type="text" (input)="onUpdateInputName($event)"> -->
+<input type="text" [(ngModel)]="titleName">
 <p> {{titleName}} </p>
 <button [disabled]="allowNewTitle" (click)="onCreateTitle()">Crear título</button>
 <p> {{createTitleStatus}} </p>

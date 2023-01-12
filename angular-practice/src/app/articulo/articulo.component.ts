@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./articulo.component.css']
 })
 export class ArticuloComponent {
+  
   numeroDeArticulo: number = 1;
   nombreDeArticulo: string = 'Aprendiendo Angular';
   allowNewTitle: boolean = true;
@@ -27,8 +28,8 @@ export class ArticuloComponent {
     this.createTitleStatus = 'Nuevo título creado'
   }
 
-  onUpdateInputName(event: any) {
-    this.titleName = event.target.value;
+  onUpdateInputName(event: Event) {
+    this.titleName = (<HTMLInputElement>event.target).value;
   }
 
 }
