@@ -25,7 +25,7 @@ export class ArticuloComponent {
   }
 
   onCreateTitle() {
-    this.createTitleStatus = 'Nuevo título creado'
+    this.createTitleStatus = 'Nuevo título creado.' + ' El título es ' + this.titleName;
   }
 
   onUpdateInputName(event: Event) {
