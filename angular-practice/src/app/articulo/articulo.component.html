@@ -4,6 +4,6 @@
 <input type="text" [(ngModel)]="titleName">
 <p> {{titleName}} </p>
 <button [disabled]="allowNewTitle" (click)="onCreateTitle()">Crear título</button>
-<p> {{createTitleStatus}} </p>
+<p *ngIf="titleCreated"> {{createTitleStatus}} </p>
 <app-titulo></app-titulo>
 <app-titulo></app-titulo>

@@ -11,8 +11,8 @@ export class ArticuloComponent {
   nombreDeArticulo: string = 'Aprendiendo Angular';
   allowNewTitle: boolean = true;
   createTitleStatus: string = 'Ningún título creado';
-
   titleName: string = '';
+  titleCreated: boolean = false;
 
   getName() {
     return this.nombreDeArticulo;
@@ -26,6 +26,7 @@ export class ArticuloComponent {
 
   onCreateTitle() {
     this.createTitleStatus = 'Nuevo título creado.' + ' El título es ' + this.titleName;
+    this.titleCreated = true;
   }
 
   onUpdateInputName(event: Event) {
