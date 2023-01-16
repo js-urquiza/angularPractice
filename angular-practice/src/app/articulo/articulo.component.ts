@@ -19,9 +19,13 @@ export class ArticuloComponent {
   }
 
   constructor() {
+    
     setTimeout(()=>{
       this.allowNewTitle = false;
     }, 2000)
+
+    this.createTitleStatus = Math.random() > 0.5 ? 'Libro' : 'Película'
+
   }
 
   onCreateTitle() {
@@ -35,6 +39,10 @@ export class ArticuloComponent {
 
   onUpdateInputName(event: Event) {
     this.titleName = (<HTMLInputElement>event.target).value;
+  }
+
+  getColor() {
+    return this.createTitleStatus === 'Libro' ? 'green' : 'blue'
   }
 
 }

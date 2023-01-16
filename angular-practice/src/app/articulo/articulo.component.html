@@ -4,9 +4,6 @@
 <input type="text" [(ngModel)]="titleName">
 <p> {{titleName}} </p>
 <button [disabled]="allowNewTitle" (click)="onCreateTitle()">Crear título</button>
-<p *ngIf="titleCreated; else noTitle"> {{createTitleStatus}} </p>
-<ng-template #noTitle>
-    <p>No se creó ningún título</p>
-</ng-template>
+<p [ngStyle]="{backgroundColor: getColor()}"> {{createTitleStatus}} </p>
 <app-titulo></app-titulo>
 <app-titulo></app-titulo>
